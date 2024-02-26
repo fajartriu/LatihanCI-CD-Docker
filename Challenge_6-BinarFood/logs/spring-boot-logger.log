@@ -176,3 +176,40 @@
 2024-02-26 19:22:33,936 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-26 19:22:33,939 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-02-26 19:22:33,946 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-02-26 19:31:38,845 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-02-26 19:31:38,884 INFO o.s.b.StartupInfoLogger [restartedMain] Starting Challenge6BinarFoodApplication using Java 21 with PID 19984 (B:\SYNRGY\6ProjectBinarfoodSecure\Challenge_6-BinarFood\target\classes started by AJAY in B:\SYNRGY\6ProjectBinarfoodSecure\Challenge_6-BinarFood)
+2024-02-26 19:31:38,886 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-02-26 19:31:38,947 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-26 19:31:38,947 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-26 19:31:40,239 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26 19:31:40,357 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 108 ms. Found 6 JPA repository interfaces.
+2024-02-26 19:31:41,338 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-02-26 19:31:41,347 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-26 19:31:41,350 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-02-26 19:31:41,350 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-26 19:31:41,430 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-02-26 19:31:41,431 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2483 ms
+2024-02-26 19:31:41,619 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26 19:31:41,692 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-26 19:31:41,696 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2024-02-26 19:31:42,071 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26 19:31:42,103 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-02-26 19:31:42,318 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@492d82cf
+2024-02-26 19:31:42,321 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-02-26 19:31:42,383 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-26 19:31:43,855 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-26 19:31:44,113 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 19:31:44,850 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-26 19:31:45,708 WARN o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [restartedMain] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-02-26 19:31:45,874 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26 19:31:46,997 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8aaa4d6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12a70555, org.springframework.security.web.context.SecurityContextHolderFilter@5b60188c, org.springframework.security.web.header.HeaderWriterFilter@41c97cc4, org.springframework.security.web.authentication.logout.LogoutFilter@5bfda9f3, project.Challenge_6BinarFood.security.jwt.JWTAuthenticationFilter@19143483, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d238482, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7574430, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@341b8cd8, org.springframework.security.web.session.SessionManagementFilter@1405ac59, org.springframework.security.web.access.ExceptionTranslationFilter@83d4f70, org.springframework.security.web.access.intercept.AuthorizationFilter@4feaafb1]
+2024-02-26 19:31:47,556 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-02-26 19:31:47,595 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-02-26 19:31:47,625 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-26 19:31:47,637 INFO o.s.b.StartupInfoLogger [restartedMain] Started Challenge6BinarFoodApplication in 9.647 seconds (process running for 11.3)
+2024-02-26 19:31:58,562 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-26 19:31:58,563 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-02-26 19:31:58,566 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2024-02-26 19:35:18,829 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 19:35:18,837 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-02-26 19:35:18,858 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
