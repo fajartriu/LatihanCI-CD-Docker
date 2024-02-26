@@ -117,9 +117,9 @@
 		</dependency>
 		<!-- JUnit for unit testing -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.8.2</version> <!-- or the latest version -->
 			<scope>test</scope>
 		</dependency>
 		<!-- Mockito for mocking objects in tests -->
