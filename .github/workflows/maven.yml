@@ -44,7 +44,7 @@ jobs:
     - name: Run Spring Boot Application
       run: |
           sleep 10 # Wait for Ngrok to initialize
-          java -jar ${{ github.workspace }}/fajartriu/LatihanCI-CD-Docker.jar
+          java -jar ${{ github.workspace }}/deploy.jar
 
     # - name: Build & push Docker image
     #   uses: mr-smithers-excellent/docker-build-push@v6
