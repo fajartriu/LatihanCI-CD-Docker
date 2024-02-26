@@ -335,3 +335,24 @@
 2024-02-26 20:30:27,267 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-26 20:30:27,274 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-02-26 20:30:27,290 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-02-26 20:37:08,952 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-02-26 20:37:09,002 INFO o.s.b.StartupInfoLogger [main] Starting Challenge6BinarFoodApplicationTests using Java 21 with PID 15664 (started by AJAY in B:\SYNRGY\6ProjectBinarfoodSecure\Challenge_6-BinarFood)
+2024-02-26 20:37:09,004 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-26 20:37:11,300 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26 20:37:11,480 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 165 ms. Found 6 JPA repository interfaces.
+2024-02-26 20:37:13,035 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26 20:37:13,257 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-26 20:37:13,264 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2024-02-26 20:37:14,199 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-26 20:37:14,279 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-02-26 20:37:14,763 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aeae34
+2024-02-26 20:37:14,766 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-02-26 20:37:17,158 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-26 20:37:17,446 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 20:37:18,660 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-26 20:37:20,725 WARN o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-02-26 20:37:21,560 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7002dacc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36b1b28, org.springframework.security.web.context.SecurityContextHolderFilter@65a86de0, org.springframework.security.web.header.HeaderWriterFilter@71669835, org.springframework.security.web.authentication.logout.LogoutFilter@796eeafb, project.Challenge_6BinarFood.security.jwt.JWTAuthenticationFilter@ebe3561, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d484961, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f9c272b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65669def, org.springframework.security.web.session.SessionManagementFilter@73ec417b, org.springframework.security.web.access.ExceptionTranslationFilter@3d1b91d1, org.springframework.security.web.access.intercept.AuthorizationFilter@69f35d31]
+2024-02-26 20:37:24,746 INFO o.s.b.StartupInfoLogger [main] Started Challenge6BinarFoodApplicationTests in 16.583 seconds (process running for 19.071)
+2024-02-26 20:37:25,355 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 20:37:25,360 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-02-26 20:37:25,389 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
