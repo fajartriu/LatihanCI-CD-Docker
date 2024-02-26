@@ -148,6 +148,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>challange6-binarfood-cicd</finalName>
 	</build>
 
 </project>
