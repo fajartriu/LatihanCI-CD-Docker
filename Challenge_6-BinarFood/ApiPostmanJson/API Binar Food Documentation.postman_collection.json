@@ -1,0 +1,1542 @@
+{
+	"info": {
+		"_postman_id": "ec66bd69-9892-4b12-80f9-c34d2488d9c2",
+		"name": "API Binar Food Documentation",
+		"description": "Hallo im Fajar Tri Utomo from Backend Class Synrgy Academy\n\nIm make this API for e-commerce Binar Food\n\nthank you",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12823152",
+		"_collection_link": "https://www.postman.com/gold-trinity-555834/workspace/binar-food-team-workspace/collection/12823152-ec66bd69-9892-4b12-80f9-c34d2488d9c2?action=share&source=collection_link&creator=12823152"
+	},
+	"item": [
+		{
+			"name": "MerchantAPI",
+			"item": [
+				{
+					"name": "CreateMerchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"merchantName\": \"Input merchant\",\r\n\t\"merchantLocation\": \"input merchant location\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/merchant",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateMerchant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"merchantName\": \"Dbesto\",\r\n\t\"merchantLocation\": \"Makasar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/merchant",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:18:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"6cf01b04-ac1d-44a4-8fed-554b368ef043\",\n        \"merchantName\": \"Dbesto\",\n        \"merchantLocation\": \"Makasar\",\n        \"open\": true\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateMerchant",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantName\": \"Input merchant name\",\r\n    \"merchantLocation\": \"Input merchant location\",\r\n    \"open\": input true for open and false for close\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/merchant/updateMerchant/{merchantId}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"updateMerchant",
+								"{merchantId}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateMerchant",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"merchantName\": \"Dbesto\",\r\n    \"merchantLocation\": \"Ambon\",\r\n    \"open\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/merchant/updateMerchant/feb432ff-32a8-4e50-881b-84d6313bfadd",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"updateMerchant",
+										"feb432ff-32a8-4e50-881b-84d6313bfadd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:20:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"feb432ff-32a8-4e50-881b-84d6313bfadd\",\n        \"merchantName\": \"Dbesto\",\n        \"merchantLocation\": \"Ambon\",\n        \"open\": false\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllMerchantOpen/Close",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"open\": \"input true for open or false for close\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/getAllMerchantOpenOrClose",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"getAllMerchantOpenOrClose"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllMerchantOpen/Close",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"open\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/getAllMerchantOpenOrClose",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"getAllMerchantOpenOrClose"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:22:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 12,\n    \"data\": [\n        {\n            \"id\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"merchantName\": \"Pizza Hut\",\n            \"merchantLocation\": \"Bali\",\n            \"open\": true\n        },\n        {\n            \"id\": \"04bd5815-8d8b-4456-a83f-030d6c991259\",\n            \"merchantName\": \"Pizza Hut\",\n            \"merchantLocation\": \"Lombok\",\n            \"open\": true\n        },\n        {\n            \"id\": \"b2258b4d-79da-41a0-9e47-bea253514c09\",\n            \"merchantName\": \"Pizza Hut\",\n            \"merchantLocation\": \"Bandung\",\n            \"open\": true\n        },\n        {\n            \"id\": \"c2a94581-9192-4690-9bfa-2a7ea9a5fbd4\",\n            \"merchantName\": \"Burger King\",\n            \"merchantLocation\": \"Bandung\",\n            \"open\": true\n        },\n        {\n            \"id\": \"6225f7b8-4279-4903-b769-d0ff72e73c0c\",\n            \"merchantName\": \"Burger King\",\n            \"merchantLocation\": \"Bekasi\",\n            \"open\": true\n        },\n        {\n            \"id\": \"bf4bf7dc-8b72-4683-85f8-045c374a2f51\",\n            \"merchantName\": \"Wing o Wing\",\n            \"merchantLocation\": \"Bandung\",\n            \"open\": true\n        },\n        {\n            \"id\": \"1a787204-d50d-4f93-b4a4-0b7c04fdad76\",\n            \"merchantName\": \"Wing o Wing\",\n            \"merchantLocation\": \"Bali\",\n            \"open\": true\n        },\n        {\n            \"id\": \"60a9b7b0-8f75-4e10-b9f1-9586ceb22b12\",\n            \"merchantName\": \"Wing o Wing\",\n            \"merchantLocation\": \"Garut\",\n            \"open\": true\n        },\n        {\n            \"id\": \"3d83fecc-c498-4366-86b9-2120c705c8b4\",\n            \"merchantName\": \"Dbesto\",\n            \"merchantLocation\": \"Majalaya\",\n            \"open\": true\n        },\n        {\n            \"id\": \"87b94d49-6752-4287-bac0-b7e809ab4897\",\n            \"merchantName\": \"Dbesto\",\n            \"merchantLocation\": \"Bogor\",\n            \"open\": true\n        },\n        {\n            \"id\": \"2255fec0-0270-43ff-a426-8692eac547ba\",\n            \"merchantName\": \"Dbesto\",\n            \"merchantLocation\": \"Makasar\",\n            \"open\": true\n        },\n        {\n            \"id\": \"6cf01b04-ac1d-44a4-8fed-554b368ef043\",\n            \"merchantName\": \"Dbesto\",\n            \"merchantLocation\": \"Makasar\",\n            \"open\": true\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "UserAPI",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"input username\",\r\n    \"emailAddress\" : \"input email\",\r\n    \"password\": \"input password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\" : \"MasIlyas\",\r\n    \"emailAddress\" : \"ilyas@gmaiol.com\",\r\n    \"password\": \"adaaja123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:22:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"65dfe291-1174-444d-943f-52376aea2a17\",\n        \"username\": \"MasIlyas\",\n        \"emailAddress\": \"ilyas@gmaiol.com\",\n        \"password\": \"adaaja123\"\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/deleteUsers/{userId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"deleteUsers",
+								"{userId}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/deleteUsers/65dfe291-1174-444d-943f-52376aea2a17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"deleteUsers",
+										"65dfe291-1174-444d-943f-52376aea2a17"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:23:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 0,\n    \"data\": \"Deleted\",\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"input username\",\r\n    \"emailAddress\" : \"input email\",\r\n    \"password\": \"input password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/updateUser/{userId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"updateUser",
+								"{userId}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\" : \"Abang\",\r\n    \"emailAddress\" : \"Abang@Gmail.com\",\r\n    \"password\": \"Kepo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/updateUser/0b38ea9e-4ff0-4552-ba22-8cbde0c987a2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"updateUser",
+										"0b38ea9e-4ff0-4552-ba22-8cbde0c987a2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:25:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"0b38ea9e-4ff0-4552-ba22-8cbde0c987a2\",\n        \"username\": \"Abang\",\n        \"emailAddress\": \"Abang@Gmail.com\",\n        \"password\": \"Kepo\"\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/getAllUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"getAllUsers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:25:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 7,\n    \"data\": [\n        {\n            \"id\": \"4cef9a05-a575-449d-8edd-176e0460181a\",\n            \"username\": \"Fajar\",\n            \"emailAddress\": \"fajar@gmail.com\",\n            \"password\": \"rahasia\"\n        },\n        {\n            \"id\": \"6f0c08d9-6c01-47ea-af53-891a26bb29f1\",\n            \"username\": \"Adi\",\n            \"emailAddress\": \"adi@gmail.com\",\n            \"password\": \"rahasia\"\n        },\n        {\n            \"id\": \"6d0af50d-054d-4f5b-b20f-97a4163c3622\",\n            \"username\": \"maman\",\n            \"emailAddress\": \"maman@gmail.com\",\n            \"password\": \"rahasia\"\n        },\n        {\n            \"id\": \"a916333b-0a39-47e9-a408-3b25296694c7\",\n            \"username\": \"bayuaja\",\n            \"emailAddress\": \"bayu@yaho.com\",\n            \"password\": \"rahasia123\"\n        },\n        {\n            \"id\": \"b4cd0c95-b266-4ec4-aaaf-93d292931136\",\n            \"username\": \"input username\",\n            \"emailAddress\": \"input email\",\n            \"password\": \"input password\"\n        },\n        {\n            \"id\": \"2d9ab21b-99e4-4ee3-bd1f-2749998fcc36\",\n            \"username\": \"MasIlyas\",\n            \"emailAddress\": \"ilyas@gmaiol.com\",\n            \"password\": \"adaaja123\"\n        },\n        {\n            \"id\": \"0b38ea9e-4ff0-4552-ba22-8cbde0c987a2\",\n            \"username\": \"Abang\",\n            \"emailAddress\": \"Abang@Gmail.com\",\n            \"password\": \"Kepo\"\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OrderAPI",
+			"item": [
+				{
+					"name": "CreateUserOrderMenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productID\": \"input product id\",\r\n    \"destinationAddress\": \"input destination dadress\",\r\n    \"quantity\" : input quantity order\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/{userId}/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"{userId}",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateUserOrderMenu",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productID\": \"d8728b15-98db-4f2c-bc53-cf96c0e9dc00\",\r\n    \"destinationAddress\": \"Mana aja asal sama kamu\",\r\n    \"quantity\" : 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users/0b38ea9e-4ff0-4552-ba22-8cbde0c987a2/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"0b38ea9e-4ff0-4552-ba22-8cbde0c987a2",
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:26:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"orderTime\": \"2023-10-27T11:26:55.7053829\",\n        \"username\": \"Abang\",\n        \"productName\": \"Cacing Bakar\",\n        \"merchantName\": \"Pizza Hut\",\n        \"destinationAddress\": \"Mana aja asal sama kamu\",\n        \"quantity\": 10,\n        \"price\": 5000,\n        \"totalPrice\": 50000,\n        \"completed\": false\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllOrderByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/{userId}/getAllUserOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"{userId}",
+								"getAllUserOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllOrderByUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/4cef9a05-a575-449d-8edd-176e0460181a/getAllUserOrder",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"4cef9a05-a575-449d-8edd-176e0460181a",
+										"getAllUserOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:29:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 8,\n    \"data\": [\n        {\n            \"orderTime\": \"2023-10-26T15:43:45.705726\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:43:46.897671\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:46.70902\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:48.382021\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:49.540255\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:50.420239\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:51.601314\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-27T02:32:31.689231\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Burger Large\",\n            \"merchantName\": \"Burger King\",\n            \"destinationAddress\": \"input destination dadress\",\n            \"quantity\": 5,\n            \"price\": 20000,\n            \"totalPrice\": 100000,\n            \"completed\": false\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/getAllOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"getAllOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllOrder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/getAllOrder",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"getAllOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:28:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 9,\n    \"data\": [\n        {\n            \"orderTime\": \"2023-10-26T15:43:45.705726\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:43:46.897671\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:46.70902\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:48.382021\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:49.540255\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:50.420239\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:51.601314\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-27T02:32:31.689231\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Burger Large\",\n            \"merchantName\": \"Burger King\",\n            \"destinationAddress\": \"input destination dadress\",\n            \"quantity\": 5,\n            \"price\": 20000,\n            \"totalPrice\": 100000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-27T11:26:55.705383\",\n            \"username\": \"Abang\",\n            \"productName\": \"Cacing Bakar\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Mana aja asal sama kamu\",\n            \"quantity\": 10,\n            \"price\": 5000,\n            \"totalPrice\": 50000,\n            \"completed\": false\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PaginationOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/getAllOrderWithPagination/{page}/{pageSize}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"getAllOrderWithPagination",
+								"{page}",
+								"{pageSize}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PaginationOrder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/getAllOrderWithPagination/0/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"getAllOrderWithPagination",
+										"0",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:29:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 5,\n    \"data\": [\n        {\n            \"orderTime\": \"2023-10-26T15:43:45.705726\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:43:46.897671\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:46.70902\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:48.382021\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:49.540255\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PagimationOrderByFilter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/getAllOrderWithPagination/{page}/{pageSize}/{filter}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"getAllOrderWithPagination",
+								"{page}",
+								"{pageSize}",
+								"{filter}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PagimationOrderByFilter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/getAllOrderWithPagination/0/5/username",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"getAllOrderWithPagination",
+										"0",
+										"5",
+										"username"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:30:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 5,\n    \"data\": [\n        {\n            \"orderTime\": \"2023-10-27T11:26:55.705383\",\n            \"username\": \"Abang\",\n            \"productName\": \"Cacing Bakar\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Mana aja asal sama kamu\",\n            \"quantity\": 10,\n            \"price\": 5000,\n            \"totalPrice\": 50000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:43:46.897671\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:46.70902\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:45:48.382021\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        },\n        {\n            \"orderTime\": \"2023-10-26T15:43:45.705726\",\n            \"username\": \"Fajar\",\n            \"productName\": \"Mie Goreng\",\n            \"merchantName\": \"Pizza Hut\",\n            \"destinationAddress\": \"Bandung\",\n            \"quantity\": 5,\n            \"price\": 5000,\n            \"totalPrice\": 25000,\n            \"completed\": false\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ProductAPI",
+			"item": [
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\" : \"input nama product\",\r\n    \"price\" : input harga\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/{merchantId}/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"{merchantId}",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateProduct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\" : \"Kecoa Goreng\",\r\n    \"price\" : 5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/2255fec0-0270-43ff-a426-8692eac547ba/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"2255fec0-0270-43ff-a426-8692eac547ba",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:32:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb\",\n        \"merchantId\": \"2255fec0-0270-43ff-a426-8692eac547ba\",\n        \"productName\": \"Kecoa Goreng\",\n        \"price\": 5000\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\" : \"input product want to update\",\r\n    \"price\" : input price want to update\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/{merchantId}/products/{productId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"{merchantId}",
+								"products",
+								"{productId}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateProduct",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\" : \"Burger Extrea Large\",\r\n    \"price\" : 30000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/c2a94581-9192-4690-9bfa-2a7ea9a5fbd4/products/6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"c2a94581-9192-4690-9bfa-2a7ea9a5fbd4",
+										"products",
+										"6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:33:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 1,\n    \"data\": {\n        \"id\": \"6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb\",\n        \"merchantId\": \"2255fec0-0270-43ff-a426-8692eac547ba\",\n        \"productName\": \"Burger Extrea Large\",\n        \"price\": 30000,\n        \"deleteProduct\": true\n    },\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllPruduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllPruduct",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:34:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 21,\n    \"data\": [\n        {\n            \"id\": \"32cd02c8-38a0-4577-a477-bb3fd02bd902\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"1113ea4e-3fa0-424d-89ee-7d89536e873b\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Pedas\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"036c83f2-dab1-457f-bd0c-d74c04e51d32\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Asam\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"9c8e2966-89b2-464a-84f0-94124ba57ffd\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"21080b09-206c-48b3-921d-e11593d3a9e6\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"206823e4-797d-46f5-8ecd-c0d80fd8b5b0\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"e4c94fd8-0acf-44f0-b851-a9068785b28c\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"cdec7834-1da2-4b3f-9567-4f27eba78001\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"5c98a428-4c4b-4602-8ad0-7c36b2b37560\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"8bd1d3f5-b1ac-4bbf-80ad-9aa068594b8e\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"e0a213ce-afd9-4319-b400-8f3640eb0f2a\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"3c678cd7-2116-4e42-9538-c66597e9e480\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Ayam Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"7b26fbab-2d03-4eb6-b356-eaa7f804d864\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Babi Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"d8728b15-98db-4f2c-bc53-cf96c0e9dc00\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Cacing Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"4d32fec5-4e39-42a2-adda-a8386422c3b8\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Dodol Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"ac706e5c-8212-4e21-83f7-d5627add8dbc\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Iga Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"8d36df37-b398-4351-a3fc-49de54a6b390\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Lele Bakar\",\n            \"price\": 1000\n        },\n        {\n            \"id\": \"1deb23ab-6300-4e15-baa0-0b166e57aa70\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Tempe\",\n            \"price\": 4000\n        },\n        {\n            \"id\": \"9ff48af4-a76e-4d3d-8fe3-e85d40222c0c\",\n            \"merchantId\": \"c2a94581-9192-4690-9bfa-2a7ea9a5fbd4\",\n            \"productName\": \"Burger Large\",\n            \"price\": 20000\n        },\n        {\n            \"id\": \"74b76db5-6489-4c36-b13a-78512c2425c3\",\n            \"merchantId\": \"2255fec0-0270-43ff-a426-8692eac547ba\",\n            \"productName\": \"Kecoa Goreng\",\n            \"price\": 3000\n        },\n        {\n            \"id\": \"6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb\",\n            \"merchantId\": \"2255fec0-0270-43ff-a426-8692eac547ba\",\n            \"productName\": \"Burger Extrea Large\",\n            \"price\": 30000\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeletePruduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/{merchantId}/products/{productId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"{merchantId}",
+								"products",
+								"{productId}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeletePruduct",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/c2a94581-9192-4690-9bfa-2a7ea9a5fbd4/products/6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"c2a94581-9192-4690-9bfa-2a7ea9a5fbd4",
+										"products",
+										"6bd21dfb-ea8e-4ee6-a461-71e1edfdcebb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:35:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 0,\n    \"data\": \"Deleted\",\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PaginationWithSorting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/products/pagination/{page}/{pageSize}/{filter}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"products",
+								"pagination",
+								"{page}",
+								"{pageSize}",
+								"{filter}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PaginationWithSorting",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/products/pagination/0/5/productName",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"products",
+										"pagination",
+										"0",
+										"5",
+										"productName"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:35:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 5,\n    \"data\": [\n        {\n            \"id\": \"3c678cd7-2116-4e42-9538-c66597e9e480\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Ayam Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"7b26fbab-2d03-4eb6-b356-eaa7f804d864\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Babi Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"9ff48af4-a76e-4d3d-8fe3-e85d40222c0c\",\n            \"merchantId\": \"c2a94581-9192-4690-9bfa-2a7ea9a5fbd4\",\n            \"productName\": \"Burger Large\",\n            \"price\": 20000\n        },\n        {\n            \"id\": \"d8728b15-98db-4f2c-bc53-cf96c0e9dc00\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Cacing Bakar\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"4d32fec5-4e39-42a2-adda-a8386422c3b8\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Dodol Bakar\",\n            \"price\": 5000\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PaginationWithoutSorting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/merchant/products/pagination/{page}/{pageSize}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"merchant",
+								"products",
+								"pagination",
+								"{page}",
+								"{pageSize}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PaginationWithoutSorting",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/merchant/products/pagination/0/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"merchant",
+										"products",
+										"pagination",
+										"0",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Oct 2023 04:36:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"countRecord\": 5,\n    \"data\": [\n        {\n            \"id\": \"32cd02c8-38a0-4577-a477-bb3fd02bd902\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"1113ea4e-3fa0-424d-89ee-7d89536e873b\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Pedas\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"036c83f2-dab1-457f-bd0c-d74c04e51d32\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Asam\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"9c8e2966-89b2-464a-84f0-94124ba57ffd\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        },\n        {\n            \"id\": \"21080b09-206c-48b3-921d-e11593d3a9e6\",\n            \"merchantId\": \"e30187a1-0aaf-4280-ac4b-31bd8f09cd87\",\n            \"productName\": \"Mie Goreng Manis\",\n            \"price\": 5000\n        }\n    ],\n    \"messages\": \"Success\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}

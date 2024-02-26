@@ -1,0 +1,37 @@
+2023-10-28 16:22:05,112 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-6 housekeeper] HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=19h30s822ms551µs300ns).
+2023-10-28 16:53:55,663 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-28 16:53:55,750 INFO o.a.j.l.DirectJDKLog [Thread-17] Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-28 16:53:55,753 INFO o.a.j.l.DirectJDKLog [Thread-17] Stopping service [Tomcat]
+2023-10-28 16:53:55,816 INFO o.a.j.l.DirectJDKLog [Thread-17] Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-28 16:53:55,827 INFO o.a.j.l.DirectJDKLog [Thread-17] Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-28 16:53:55,906 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-17] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-28 16:53:55,940 INFO c.z.h.HikariDataSource [Thread-17] HikariPool-6 - Shutdown initiated...
+2023-10-28 16:53:55,968 INFO c.z.h.HikariDataSource [Thread-17] HikariPool-6 - Shutdown completed.
+2023-10-28 16:53:56,740 INFO o.s.b.StartupInfoLogger [restartedMain] Starting Challenge4BinarFoodApplication using Java 21 with PID 25264 (B:\SYNRGY\Project_Challange_Binar\Challenge_4-BinarFood\target\classes started by AJAY in B:\SYNRGY\Project_Challange_Binar\Challenge_4-BinarFood)
+2023-10-28 16:53:56,741 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-10-28 16:53:57,840 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-28 16:53:57,874 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2023-10-28 16:53:58,247 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-10-28 16:53:58,247 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-28 16:53:58,248 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-10-28 16:53:58,248 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-28 16:53:58,284 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-10-28 16:53:58,284 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1521 ms
+2023-10-28 16:53:58,402 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-28 16:53:58,423 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-28 16:53:58,428 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-7 - Starting...
+2023-10-28 16:53:58,522 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@eb0623f
+2023-10-28 16:53:58,523 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-7 - Start completed.
+2023-10-28 16:53:58,551 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-10-28 16:53:59,001 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-28 16:53:59,212 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-28 16:53:59,885 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-28 16:54:00,013 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2023-10-28 16:54:00,553 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-10-28 16:54:00,580 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-10-28 16:54:00,585 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-28 16:54:00,594 INFO o.s.b.StartupInfoLogger [restartedMain] Started Challenge4BinarFoodApplication in 4.079 seconds (process running for 72578.571)
+2023-10-28 16:54:00,596 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-10-28 16:56:57,453 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-28 16:56:57,455 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-7 - Shutdown initiated...
+2023-10-28 16:56:57,463 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-7 - Shutdown completed.
