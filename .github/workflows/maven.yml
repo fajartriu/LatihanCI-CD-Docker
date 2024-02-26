@@ -44,7 +44,7 @@ jobs:
     - name: Run Spring Boot Application
       run: |
           sleep 10 # Wait for Ngrok to initialize
-          java -jar ${{ github.workspace }}/target/my-spring-boot-app.jar
+          java -jar ${{ github.workspace }}target/Challenge_6-BinarFood-0.0.1-SNAPSHOT.jar
 
 
     # - name: Build & push Docker image
